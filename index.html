@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0b0b10">
+<title>Video Editor Portfolio</title>
+<meta name="description" content="Video editor portfolio – motion graphics and premium video editing. ভিডিও এডিটর পোর্টফোলিও।">
+<style>
+:root { --bg: #0b0b10; --card: #15151d; --line: #24242f; --text: #f2f2f7; --muted: #a1a1b3; --a: #ffc233; --b: #ff7a18; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 64px; }
+body { margin: 0; background: var(--bg); color: var(--text); font-family: Roboto, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans Bengali", "Kalpurush", sans-serif; font-weight: 600; line-height: 1.6; -webkit-text-size-adjust: 100%; }
+a { color: inherit; }
+.wrap { width: min(1120px, 100% - 32px); margin: 0 auto; }
+
+.hero { padding: 44px 0 26px; text-align: center; background: radial-gradient(ellipse at 50% 0, #5a3c0a66, transparent 60%); }
+.avatar { width: 112px; height: 112px; border-radius: 50%; margin: 0 auto 16px; padding: 3px; background: linear-gradient(135deg, var(--a), var(--b)); }
+.avatar.photo { padding: 0; background: none; width: 150px; height: 150px; }
+.avatar > * { width: 100%; height: 100%; border-radius: 50%; display: grid; place-items: center; background: #1a1a24; object-fit: cover; font-size: 44px; font-weight: 800; }
+.hi { margin: 0; color: var(--muted); font-size: 15px; font-weight: 700; letter-spacing: .5px; }
+h1 { margin: 2px 0 8px; font-size: clamp(36px, 9vw, 60px); line-height: 1.1; font-weight: 900; letter-spacing: -.5px; }
+.role { margin: 0; font-weight: 900; font-size: 16px; text-transform: uppercase; letter-spacing: 2px; background: linear-gradient(90deg, var(--a), var(--b)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.role.bn { margin: 4px 0 16px; font-size: 18px; text-transform: none; letter-spacing: 0; font-weight: 800; }
+.about { max-width: 640px; margin: 0 auto 12px; color: #f0f0f8; font-weight: 700; white-space: pre-line; }
+.about.en { color: #b9b9c8; font-size: 15px; font-weight: 600; margin-bottom: 22px; }
+.links { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 44px; padding: 8px 18px; border-radius: 999px; border: 1px solid var(--line); background: var(--card); color: var(--text); text-decoration: none; font-weight: 800; font-size: 15px; font-family: inherit; cursor: pointer; }
+.btn.main { border: 0; color: #1a1100; background: linear-gradient(135deg, var(--a), var(--b)); }
+.btn:focus-visible, .chip:focus-visible, .play:focus-visible, .wa:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
+.count { margin: 18px 0 0; color: var(--muted); font-size: 13px; }
+
+.skills { padding: 26px 0 4px; }
+.skills h2 { margin: 0 0 14px; font-size: 24px; font-weight: 900; text-align: center; }
+.sgrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: 12px; }
+.sk { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 16px; }
+.sk b { display: block; font-size: 17px; font-weight: 900; color: var(--a); line-height: 1.3; }
+.sk em { display: block; margin-bottom: 6px; font-style: normal; font-size: 15px; font-weight: 800; color: #e3b95a; }
+.sk span { display: block; color: #e2e2ec; font-size: 14px; font-weight: 700; }
+.sk span + span { margin-top: 2px; color: var(--muted); }
+
+.nav { position: sticky; top: 0; z-index: 5; background: #0b0b10f2; border-bottom: 1px solid var(--line); margin-top: 22px; }
+.nav .wrap { display: flex; gap: 8px; overflow-x: auto; padding: 10px 0; scrollbar-width: none; }
+.nav .wrap::-webkit-scrollbar { display: none; }
+.chip { flex: none; min-height: 40px; display: inline-flex; align-items: center; padding: 6px 14px; border-radius: 999px; border: 1px solid var(--line); background: var(--card); text-decoration: none; font-size: 14px; font-weight: 800; white-space: nowrap; }
+
+section.cat { padding: 34px 0 6px; }
+.cat h2 { margin: 0 0 4px; font-size: 23px; font-weight: 900; display: flex; align-items: center; gap: 10px; }
+.cat h2::before { content: ""; width: 5px; height: 22px; border-radius: 4px; background: linear-gradient(var(--a), var(--b)); flex: none; }
+.cat .n { margin: 0 0 14px; color: var(--muted); font-size: 13px; min-height: 1px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); gap: 16px; }
+.card { position: relative; background: var(--card); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; }
+.card.v { max-width: 260px; }
+.thumb { position: relative; aspect-ratio: 16 / 9; background: #101018; }
+.v .thumb { aspect-ratio: 9 / 16; }
+.thumb > video, .thumb > iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; background: #000; }
+.play { position: absolute; inset: 0; width: 100%; height: 100%; padding: 0; border: 0; cursor: pointer; background: linear-gradient(135deg, #3a2a08, #5c2e0a); }
+.play img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.play i { position: absolute; left: 50%; top: 50%; width: 58px; height: 58px; margin: -29px 0 0 -29px; border-radius: 50%; background: #000a; border: 2px solid #fff; }
+.play i::after { content: ""; position: absolute; left: 23px; top: 17px; border-left: 17px solid #fff; border-top: 11px solid transparent; border-bottom: 11px solid transparent; }
+.open { position: absolute; inset: 0; display: grid; place-items: center; text-decoration: none; font-weight: 700; background: linear-gradient(135deg, #3a2a08, #5c2e0a); }
+.ct { margin: 0; padding: 10px 12px 12px; font-size: 15px; font-weight: 800; line-height: 1.4; overflow-wrap: anywhere; }
+.del { position: absolute; top: 8px; right: 8px; z-index: 2; width: 40px; height: 40px; border-radius: 50%; border: 0; background: #c0262d; color: #fff; font-size: 18px; cursor: pointer; }
+.empty { padding: 22px; border: 1px dashed var(--line); border-radius: 14px; color: var(--muted); text-align: center; font-size: 14px; }
+
+.contact { margin: 46px 0 0; padding: 36px 0 44px; text-align: center; background: #101018; border-top: 1px solid var(--line); }
+.contact h2 { margin: 0 0 6px; font-size: 24px; font-weight: 900; }
+.contact p { margin: 0 0 18px; color: var(--muted); }
+footer { padding: 18px 0 96px; text-align: center; color: var(--muted); font-size: 12px; }
+.msg { padding: 40px 16px; text-align: center; color: var(--muted); }
+
+.wa { position: fixed; right: 16px; bottom: calc(16px + env(safe-area-inset-bottom)); z-index: 10; width: 58px; height: 58px; border-radius: 50%; background: #25d366; display: grid; place-items: center; box-shadow: 0 4px 14px #0008; }
+.wa svg { width: 34px; height: 34px; }
+
+.up { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: center; margin-top: 12px; padding: 14px; border: 2px dashed #5a4a1a; border-radius: 14px; background: #1a160a; }
+.up input { display: none; }
+.toast { position: fixed; left: 12px; right: 84px; bottom: calc(18px + env(safe-area-inset-bottom)); z-index: 30; padding: 12px 14px; border-radius: 12px; background: #1d1d27; border: 1px solid #3a3a48; font-size: 14px; font-weight: 700; overflow-wrap: anywhere; }
+.toast.ok { border-color: #2e7d4a; color: #9af0b4; } .toast.err { border-color: #a33; color: #ffb0b0; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="avatar" id="avatar"></div>
+    <p class="hi">আমি · I am</p>
+    <h1 id="name">…</h1>
+    <p class="role" id="role"></p>
+    <p class="role bn" id="roleBn"></p>
+    <p class="about" id="aboutBn"></p>
+    <p class="about en" id="about"></p>
+    <div class="links" id="links"></div>
+    <p class="count" id="count"></p>
+    <p class="count" id="pv" hidden>প্রিভিউ: videos.txt পাশে না থাকায় ভেতরের নমুনা তথ্য দেখানো হচ্ছে। সাইটে তুললে videos.txt থেকে আসবে।</p>
+  </div>
+</header>
+
+<section class="skills wrap" id="skills" hidden>
+  <h2>আমি যা করি · What I do</h2>
+  <div class="sgrid" id="sgrid"></div>
+</section>
+
+<nav class="nav" id="nav" aria-label="Categories" hidden><div class="wrap" id="chips"></div></nav>
+
+<main class="wrap" id="cats">
+  <noscript><p class="msg">ভিডিও দেখতে JavaScript চালু করুন। Please enable JavaScript.</p></noscript>
+  <p class="msg" id="loading">লোড হচ্ছে… Loading…</p>
+</main>
+
+<section class="contact" id="contact" hidden>
+  <div class="wrap">
+    <h2>আমার সাথে কাজ করতে চান? · Let's work together</h2>
+    <p>আপনার ভিডিওর কাজ নিয়ে যোগাযোগ করুন। Contact me about your video project.</p>
+    <div class="links" id="links2"></div>
+  </div>
+</section>
+<footer><div class="wrap" id="foot"></div></footer>
+
+<a class="wa" id="waFloat" href="#" target="_blank" rel="noopener" aria-label="WhatsApp" hidden>
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z" fill="none" stroke="#fff" stroke-width="1.8" stroke-linejoin="round"/><path transform="translate(5.3 5.3) scale(.57)" fill="#fff" d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+</a>
+
+<div class="toast" id="toast" role="status" hidden></div>
+<script type="text/plain" id="fb">
+name: MD Abu Musa
+title: Video Editor · Motion Graphics
+title_bn: ভিডিও এডিটর · মোশন গ্রাফিক্স
+about_bn: আপনার প্রোডাক্টের জন্য প্রিমিয়াম মানের ভিডিও এডিটিং লাগলে আমার সাথে যোগাযোগ করুন।\nআমি মোশন গ্রাফিক্স ও আফটার ইফেক্টসের কাজ করি, আর AI ব্যবহার করে খুব দ্রুত সুন্দর এডিট করে দিই।
+about: Need premium video editing for your product? Get in touch.\nI create motion graphics in After Effects and use AI (including Claude) to edit fast and beautifully.
+whatsapp: 8801866124377
+skill: Premium Video Editing / প্রিমিয়াম ভিডিও এডিটিং - Clean cuts, color and sound for product and brand videos. / পরিষ্কার কাট, রঙ ও সাউন্ডে প্রোডাক্ট ও ব্র্যান্ডের ভিডিও।
+skill: Motion Graphics / মোশন গ্রাফিক্স - Animation, titles and effects in After Effects. / আফটার ইফেক্টসে অ্যানিমেশন, টাইটেল ও ইফেক্ট।
+skill: AI-Powered Fast Editing / AI দিয়ে দ্রুত এডিট - Fast, polished edits using Claude and AI tools. / Claude ও AI টুল দিয়ে কম সময়ে সুন্দর ফল।
+# Motion Graphics / মোশন গ্রাফিক্স
+# Premium Video Editing / প্রিমিয়াম ভিডিও এডিটিং
+# AI Edits / AI দিয়ে এডিট
+</script>
+<script>
+const $ = s => document.querySelector(s);
+const el = (t, c, x) => { const e = document.createElement(t); if (c) e.className = c; if (x != null) e.textContent = x; return e; };
+const bn = n => String(n).replace(/\d/g, d => "০১২৩৪৫৬৭৮৯"[d]);
+const okUrl = u => /^https?:\/\//i.test(u) || !/^[a-z][a-z0-9+.-]*:/i.test(u);
+const KEYS = ["name", "title", "title_bn", "about", "about_bn", "photo", "whatsapp", "facebook", "youtube", "instagram", "tiktok", "email", "repo"];
+const DEFAULT_PHOTO = "photo.jpg";
+const S = { cfg: {}, cats: [], tok: "", preview: false };
+const removeVideo = () => {}, uploadBox = () => document.createElement("div");
+
+function parse(text) {
+  const cfg = {}, cats = [];
+  let cur = null;
+  for (let raw of text.replace(/\r/g, "").split("\n")) {
+    const line = raw.trim();
+    if (!line || line.startsWith("//")) continue;
+    if (line.startsWith("#")) { cur = { name: line.replace(/^#+\s*/, ""), items: [] }; cats.push(cur); continue; }
+    if (!cur) {
+      const m = line.match(/^([a-z_]+)\s*:\s*(.*)$/i);
+      if (m) {
+        const k = m[1].toLowerCase();
+        if (k === "skill") (cfg.skills = cfg.skills || []).push(m[2].trim());
+        else if (KEYS.includes(k)) cfg[k] = m[2].trim();
+      }
+      continue;
+    }
+    if (line.includes("|")) {
+      const p = line.split("|").map(s => s.trim());
+      if (p[1]) cur.items.push({ title: p[0] || "Video", url: p[1], v: /^v(ertical)?$/i.test(p[2] || ""), raw: line });
+    }
+  }
+  return { cfg, cats };
+}
+
+function media(u) {
+  let m;
+  if ((m = u.match(/(?:youtu\.be\/|youtube\.com\/(?:watch\?(?:[^#]*&)?v=|shorts\/|embed\/|live\/))([\w-]{11})/i)))
+    return { t: "embed", src: `https://www.youtube-nocookie.com/embed/${m[1]}?autoplay=1&rel=0&playsinline=1`, thumb: `https://i.ytimg.com/vi/${m[1]}/hqdefault.jpg` };
+  if ((m = u.match(/drive\.google\.com\/file\/d\/([\w-]+)/i)))
+    return { t: "embed", src: `https://drive.google.com/file/d/${m[1]}/preview`, thumb: `https://drive.google.com/thumbnail?id=${m[1]}&sz=w640` };
+  if ((m = u.match(/vimeo\.com\/(?:video\/)?(\d+)/i)))
+    return { t: "embed", src: `https://player.vimeo.com/video/${m[1]}?autoplay=1` };
+  if (/facebook\.com|fb\.watch/i.test(u))
+    return { t: "embed", src: `https://www.facebook.com/plugins/video.php?href=${encodeURIComponent(u)}&show_text=false&autoplay=true` };
+  if (/\.(mp4|webm|mov|m4v)(\?|#|$)/i.test(u)) return { t: "file" };
+  return { t: "link" };
+}
+
+function card(it) {
+  const c = el("article", "card" + (it.v ? " v" : "")), box = el("div", "thumb"), m = media(it.url);
+  if (m.t === "file") {
+    const v = document.createElement("video");
+    v.controls = true; v.preload = "metadata"; v.playsInline = true; v.src = it.url + "#t=0.1";
+    box.append(v);
+  } else if (m.t === "embed") {
+    const b = el("button", "play"); b.type = "button"; b.setAttribute("aria-label", "Play: " + it.title);
+    if (m.thumb) { const i = new Image(); i.loading = "lazy"; i.alt = ""; i.src = m.thumb; i.onerror = () => i.remove(); b.append(i); }
+    b.append(el("i"));
+    b.onclick = () => {
+      const f = document.createElement("iframe");
+      f.src = m.src; f.title = it.title; f.allowFullscreen = true;
+      f.allow = "autoplay; encrypted-media; picture-in-picture; fullscreen";
+      f.referrerPolicy = "strict-origin-when-cross-origin";
+      box.replaceChildren(f);
+    };
+    box.append(b);
+  } else {
+    const a = el("a", "open", "Watch ↗"); a.href = it.url; a.target = "_blank"; a.rel = "noopener"; box.append(a);
+  }
+  c.append(box, el("h3", "ct", it.title));
+  return c;
+}
+
+function contactLinks(cfg, host) {
+  host.replaceChildren();
+  const wa = (cfg.whatsapp || "").replace(/\D/g, "");
+  const L = [];
+  if (wa) L.push(["WhatsApp", "https://wa.me/" + wa, true]);
+  if (cfg.email && /^[^\s@]+@[^\s@]+$/.test(cfg.email)) L.push(["Email", "mailto:" + cfg.email]);
+  [["facebook", "Facebook"], ["youtube", "YouTube"], ["instagram", "Instagram"], ["tiktok", "TikTok"]].forEach(([k, n]) => {
+    if (cfg[k] && /^https?:\/\//i.test(cfg[k])) L.push([n, cfg[k]]);
+  });
+  L.forEach(([n, h, main]) => {
+    const a = el("a", "btn" + (main ? " main" : ""), n); a.href = h;
+    if (/^https/.test(h)) { a.target = "_blank"; a.rel = "noopener"; }
+    host.append(a);
+  });
+  return L.length;
+}
+
+const catLabel = n => n.replace(/\s*\/\s*/, " · ");
+
+function render({ cfg, cats }) {
+  S.cfg = cfg; S.cats = cats;
+  const name = cfg.name || "Your Name";
+  document.title = name + (cfg.title ? " | " + cfg.title : "") + " – Portfolio";
+  $("#name").textContent = name;
+  $("#role").textContent = cfg.title || "";
+  $("#roleBn").textContent = cfg.title_bn || "";
+  const nl = t => (t || "").replace(/\\n/g, "\n");
+  $("#aboutBn").textContent = nl(cfg.about_bn);
+  $("#about").textContent = nl(cfg.about);
+  const av = $("#avatar"); av.replaceChildren(); av.classList.remove("photo");
+  av.classList.add("photo");
+  const i = new Image(); i.alt = name; i.decoding = "async";
+  const own = cfg.photo && okUrl(cfg.photo) ? cfg.photo : "";
+  i.onerror = () => { if (own && i.src !== DEFAULT_PHOTO) i.src = DEFAULT_PHOTO; else { av.classList.remove("photo"); av.replaceChildren(el("span", "", name.charAt(0))); } };
+  i.src = own || DEFAULT_PHOTO;
+  av.append(i);
+
+  const sg = $("#sgrid"); sg.replaceChildren(); $("#skills").hidden = !(cfg.skills || []).length;
+  (cfg.skills || []).forEach(t => {
+    const [h, ...r] = t.split(" - "), [hEn, hBn] = h.split(" / "), [dEn, dBn] = r.join(" - ").split(" / "), d = el("div", "sk");
+    d.append(el("b", "", (hEn || "").trim()));
+    if (hBn) d.append(el("em", "", hBn.trim()));
+    if (dEn) d.append(el("span", "", dEn.trim()));
+    if (dBn) d.append(el("span", "", dBn.trim()));
+    sg.append(d);
+  });
+
+  const hasLinks = contactLinks(cfg, $("#links"));
+  contactLinks(cfg, $("#links2"));
+  $("#contact").hidden = !hasLinks;
+  const wa = (cfg.whatsapp || "").replace(/\D/g, ""), wf = $("#waFloat");
+  wf.hidden = !wa; if (wa) wf.href = "https://wa.me/" + wa;
+
+  const main = $("#cats"), chips = $("#chips");
+  main.replaceChildren(); chips.replaceChildren();
+  let total = 0;
+  cats.forEach((c, idx) => {
+    const sec = el("section", "cat"); sec.id = "c" + idx;
+    sec.append(el("h2", "", catLabel(c.name)));
+    const valid = c.items.filter(it => okUrl(it.url));
+    total += valid.length;
+    sec.append(el("p", "n", valid.length ? bn(valid.length) + "টি ভিডিও · " + valid.length + " videos" : ""));
+    if (valid.length) { const g = el("div", "grid"); valid.forEach(it => g.append(card(it))); sec.append(g); }
+    else sec.append(el("div", "empty", "শিগগির ভিডিও আসছে · Coming soon"));
+    main.append(sec);
+    const ch = el("a", "chip", catLabel(c.name)); ch.href = "#c" + idx; chips.append(ch);
+  });
+  if (!cats.length) main.append(el("p", "msg", "No categories yet. Add a line starting with # in videos.txt."));
+  $("#nav").hidden = cats.length < 2;
+  $("#count").textContent = total ? `${bn(total)}টি কাজ · ${total} projects` : "";
+  $("#pv").hidden = !S.preview;
+  $("#foot").textContent = "© " + new Date().getFullYear() + " " + name;
+}
+
+fetch("videos.txt", { cache: "no-cache" })
+  .then(r => { if (!r.ok) throw new Error(r.status); return r.text(); })
+  .then(t => render(parse(t)))
+  .catch(() => { S.preview = true; render(parse($("#fb").textContent)); });
+</script>
+</body>
+  </html>
