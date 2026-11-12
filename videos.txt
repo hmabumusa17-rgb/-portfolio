@@ -1,0 +1,19 @@
+// ছবির নাম photo.jpg না হলে নিচের লাইনের আগের // মুছে আপনার ছবির নাম লিখুন
+// photo: IMG_1234.jpg
+
+name: MD Abu Musa
+title: Video Editor · Motion Graphics
+title_bn: ভিডিও এডিটর · মোশন গ্রাফিক্স
+about_bn: আপনার প্রোডাক্টের জন্য প্রিমিয়াম মানের ভিডিও এডিটিং লাগলে আমার সাথে যোগাযোগ করুন।\nআমি মোশন গ্রাফিক্স ও আফটার ইফেক্টসের কাজ করি, আর AI ব্যবহার করে খুব দ্রুত সুন্দর এডিট করে দিই।
+about: Need premium video editing for your product? Get in touch.\nI create motion graphics in After Effects and use AI (including Claude) to edit fast and beautifully.
+whatsapp: 8801866124377
+
+skill: Premium Video Editing / প্রিমিয়াম ভিডিও এডিটিং - Clean cuts, color and sound for product and brand videos. / পরিষ্কার কাট, রঙ ও সাউন্ডে প্রোডাক্ট ও ব্র্যান্ডের ভিডিও।
+skill: Motion Graphics / মোশন গ্রাফিক্স - Animation, titles and effects in After Effects. / আফটার ইফেক্টসে অ্যানিমেশন, টাইটেল ও ইফেক্ট।
+skill: AI-Powered Fast Editing / AI দিয়ে দ্রুত এডিট - Fast, polished edits using Claude and AI tools. / Claude ও AI টুল দিয়ে কম সময়ে সুন্দর ফল।
+
+# Motion Graphics / মোশন গ্রাফিক্স
+
+# Premium Video Editing / প্রিমিয়াম ভিডিও এডিটিং
+
+# AI Edits / AI দিয়ে এডিট
